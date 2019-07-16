@@ -1,0 +1,27 @@
+.container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  width: 30%;
+  padding: 0.8rem 1rem;
+  margin-top: 2rem;
+  text-align: center;
+  cursor: pointer;
+  color: white;
+}
+
+.bg-primary {
+  background: $primary-color;
+}
+.bg-clear {
+  background: $black-color;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}

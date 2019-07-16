@@ -1,0 +1,90 @@
+@import "variable";
+@import "utilities";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  color: $black-color;
+}
+
+.main-title {
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+.second-title {
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+.card {
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 600px;
+  background: $light-color;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px $divider;
+
+  &:first-child {
+    border-bottom: none;
+  }
+  #new-task {
+    display: flex;
+    flex-direction: column;
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+
+      #new-task-input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $divider;
+        width: 100%;
+        height: 100%;
+        padding: 1rem 0 0.5rem;
+
+        &:focus {
+          outline: none;
+          border-bottom: 1.2px solid $primary-color;
+        }
+      }
+      #new-task-label {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 1rem;
+        transition: all 0.3s ease;
+      }
+      #new-task-input:focus + #new-task-label,
+      #new-task-input:valid + #new-task-label {
+        transform: translateY(-20px);
+        color: $primary-color;
+        font-size: 0.8rem;
+      }
+    }
+  }
+  .card-task {
+    display: flex;
+    justify-content: space-between;
+    background: white;
+    border: solid 1px $divider;
+    padding: 0.7rem 2rem 0.7rem 1rem;
+
+    a {
+      color: $secondary-color;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: rotate(-70deg);
+      }
+    }
+  }
+}
