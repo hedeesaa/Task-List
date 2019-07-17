@@ -7,7 +7,7 @@
 .btn {
   display: inline-block;
   border: none;
-  width: 30%;
+  width: 40%;
   padding: 0.8rem 1rem;
   margin-top: 2rem;
   text-align: center;
@@ -24,4 +24,39 @@
 
 .btn:hover {
   opacity: 0.8;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1rem;
+
+  .input-animation {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid $divider;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0 0.5rem;
+
+    &:focus {
+      outline: none;
+      border-bottom: 1.2px solid $primary-color;
+    }
+  }
+  .label-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 1rem;
+    transition: all 0.3s ease;
+  }
+  .input-animation:focus + .label-animation,
+  .input-animation:valid + .label-animation {
+    transform: translateY(-20px);
+    color: $primary-color;
+    font-size: 0.8rem;
+  }
 }

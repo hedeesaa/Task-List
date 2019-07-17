@@ -6,7 +6,7 @@
 .btn {
   display: inline-block;
   border: none;
-  width: 30%;
+  width: 40%;
   padding: 0.8rem 1rem;
   margin-top: 2rem;
   text-align: center;
@@ -21,6 +21,34 @@
 
 .btn:hover {
   opacity: 0.8; }
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 1rem; }
+  .input-container .input-animation {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #cccccc;
+    width: 100%;
+    height: 100%;
+    padding: 1rem 0 0.5rem; }
+    .input-container .input-animation:focus {
+      outline: none;
+      border-bottom: 1.2px solid #07916e; }
+  .input-container .label-animation {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 1rem;
+    transition: all 0.3s ease; }
+  .input-container .input-animation:focus + .label-animation,
+  .input-container .input-animation:valid + .label-animation {
+    transform: translateY(-20px);
+    color: #07916e;
+    font-size: 0.8rem; }
 
 * {
   margin: 0;
@@ -37,12 +65,12 @@ body {
 
 .second-title {
   font-weight: normal;
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
 
 .card {
   padding: 1rem;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 500px;
   background: #f7f7f7;
   display: flex;
   flex-direction: column;
@@ -52,32 +80,6 @@ body {
   .card #new-task {
     display: flex;
     flex-direction: column; }
-    .card #new-task .input-container {
-      display: flex;
-      flex-direction: column;
-      position: relative; }
-      .card #new-task .input-container #new-task-input {
-        background: transparent;
-        border: none;
-        border-bottom: 1px solid #cccccc;
-        width: 100%;
-        height: 100%;
-        padding: 1rem 0 0.5rem; }
-        .card #new-task .input-container #new-task-input:focus {
-          outline: none;
-          border-bottom: 1.2px solid #07916e; }
-      .card #new-task .input-container #new-task-label {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 1rem;
-        transition: all 0.3s ease; }
-      .card #new-task .input-container #new-task-input:focus + #new-task-label,
-      .card #new-task .input-container #new-task-input:valid + #new-task-label {
-        transform: translateY(-20px);
-        color: #07916e;
-        font-size: 0.8rem; }
   .card .card-task {
     display: flex;
     justify-content: space-between;
@@ -89,31 +91,3 @@ body {
       transition: all 0.3s ease; }
       .card .card-task .remove:hover {
         transform: rotate(-70deg); }
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 1rem; }
-  .input-container #input-search {
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #cccccc;
-    width: 100%;
-    height: 100%;
-    padding: 1rem 0 0.5rem; }
-    .input-container #input-search:focus {
-      outline: none;
-      border-bottom: 1.2px solid #07916e; }
-  .input-container #search-label {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 1rem;
-    transition: all 0.3s ease; }
-  .input-container #input-search:focus + #search-label,
-  .input-container #input-search:valid + #search-label {
-    transform: translateY(-20px);
-    color: #07916e;
-    font-size: 0.8rem; }

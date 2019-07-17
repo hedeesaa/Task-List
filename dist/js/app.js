@@ -5,7 +5,7 @@ const newTask = document.querySelector("#new-task-input");
 const removeBtn = document.querySelector(".remove");
 const taskList = document.querySelector("#task-list");
 const clearBtn = document.querySelector("#clearAll");
-const filter = document.querySelector("#input-search");
+const filter = document.querySelector("#filter");
 //load event listeners
 loadEventListener();
 
